@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using _6251App.FileManipulation;
 
 namespace _6251App
 {
@@ -26,15 +27,12 @@ namespace _6251App
 
         private void btnOpenOriginal_Click(object sender, EventArgs e)
         {
-            OpenFileDialog op = new OpenFileDialog();
-            DialogResult dr = op.ShowDialog();
-            if (dr == DialogResult.OK)
+            DialogFileManipulation manipuler = new DialogFileManipulation();
+            Bitmap image = manipuler.Load();
+            
+            if (image != null)
             {
-                string path = op.FileName;
-                picPreview.Load(path);
-                Bitmap temp = new Bitmap(picPreview.Image, new Size(picPreview.Width, picPreview.Height));
-                picPreview.Image = temp;
-                map = new Bitmap(picPreview.Image);
+                picPreview.Image = image;
                 origin = picPreview.Image;
             }
         }
