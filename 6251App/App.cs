@@ -25,6 +25,8 @@ namespace _6251App
         {
             InitializeComponent();
             manipuler = new DialogFileManipulation();
+            
+            // add filters to combobox
             cmbEdgeDetection.Items.Add(new NullFilter());
             cmbEdgeDetection.Items.Add(new RainbowFilter());
             cmbEdgeDetection.Items.Add(new SwapFilter());
@@ -32,6 +34,12 @@ namespace _6251App
             cmbEdgeDetection.Items.Add(new SobelFilter());
         }
 
+        /// <summary>
+        /// Load a bitmap from the disk, display it in the picturebox and keep an instance
+        /// as the original picture
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void btnOpenOriginal_Click(object sender, EventArgs e)
         {
             Bitmap image = manipuler.Load();
@@ -43,6 +51,11 @@ namespace _6251App
             }
         }
 
+        /// <summary>
+        /// Create a temporary picture from the original then apply filter
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void cmbEdgeDetection_SelectedIndexChanged(object sender, EventArgs e)
         {
             filter = (IFilter)cmbEdgeDetection.SelectedItem;
@@ -51,6 +64,11 @@ namespace _6251App
             picPreview.Image = filtered;
         }
 
+        /// <summary>
+        /// Save filtered image
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void btnSaveNewImage_Click(object sender, EventArgs e)
         {
             manipuler.Save(filtered);
