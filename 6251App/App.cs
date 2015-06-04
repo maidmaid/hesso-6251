@@ -46,7 +46,7 @@ namespace _6251App
         public void cmbEdgeDetection_SelectedIndexChanged(object sender, EventArgs e)
         {
             filter = (IFilter)cmbEdgeDetection.SelectedItem;
-            Bitmap temp = new Bitmap(original, new Size(picPreview.Width, picPreview.Height));
+            Bitmap temp = new Bitmap(original, new Size(original.Width, original.Height));
             filtered = filter.Apply(temp);
             picPreview.Image = filtered;
         }
