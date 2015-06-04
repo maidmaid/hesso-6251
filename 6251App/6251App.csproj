@@ -49,6 +49,9 @@
   <ItemGroup>
     <Compile Include="FileManipulation\Base\IFileManipulation.cs" />
     <Compile Include="FileManipulation\DialogFileManipulation.cs" />
+    <Compile Include="Filter\Base\ConvolutionFilter.cs" />
+    <Compile Include="Filter\SobelFilter.cs" />
+    <Compile Include="Filter\LaplacianFilter.cs" />
     <Compile Include="Filter\NullFilter.cs" />
     <Compile Include="Filter\SwapFilter.cs" />
     <Compile Include="Filter\RainbowFilter.cs" />

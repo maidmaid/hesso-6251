@@ -28,6 +28,8 @@ namespace _6251App
             cmbEdgeDetection.Items.Add(new NullFilter());
             cmbEdgeDetection.Items.Add(new RainbowFilter());
             cmbEdgeDetection.Items.Add(new SwapFilter());
+            cmbEdgeDetection.Items.Add(new LaplacianFilter());
+            cmbEdgeDetection.Items.Add(new SobelFilter());
         }
 
         public void btnOpenOriginal_Click(object sender, EventArgs e)
