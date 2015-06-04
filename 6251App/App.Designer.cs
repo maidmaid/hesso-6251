@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.picPreview = new System.Windows.Forms.PictureBox();
-            this.btnOpenOriginal = new System.Windows.Forms.Button();
             this.cmbEdgeDetection = new System.Windows.Forms.ComboBox();
             this.btnSaveNewImage = new System.Windows.Forms.Button();
+            this.btnOpenOriginal = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picPreview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,17 +47,6 @@
             this.picPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picPreview.TabIndex = 14;
             this.picPreview.TabStop = false;
-            // 
-            // btnOpenOriginal
-            // 
-            this.btnOpenOriginal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOpenOriginal.Location = new System.Drawing.Point(6, 639);
-            this.btnOpenOriginal.Name = "btnOpenOriginal";
-            this.btnOpenOriginal.Size = new System.Drawing.Size(150, 46);
-            this.btnOpenOriginal.TabIndex = 16;
-            this.btnOpenOriginal.Text = "Load Image";
-            this.btnOpenOriginal.UseVisualStyleBackColor = true;
-            this.btnOpenOriginal.Click += new System.EventHandler(this.btnOpenOriginal_Click);
             // 
             // cmbEdgeDetection
             // 
@@ -81,6 +70,17 @@
             this.btnSaveNewImage.UseVisualStyleBackColor = true;
             this.btnSaveNewImage.Click += new System.EventHandler(this.btnSaveNewImage_Click);
             // 
+            // btnOpenOriginal
+            // 
+            this.btnOpenOriginal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpenOriginal.Location = new System.Drawing.Point(6, 639);
+            this.btnOpenOriginal.Name = "btnOpenOriginal";
+            this.btnOpenOriginal.Size = new System.Drawing.Size(150, 46);
+            this.btnOpenOriginal.TabIndex = 16;
+            this.btnOpenOriginal.Text = "Load Image";
+            this.btnOpenOriginal.UseVisualStyleBackColor = true;
+            this.btnOpenOriginal.Click += new System.EventHandler(this.btnOpenOriginal_Click);
+            // 
             // App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -100,9 +100,9 @@
         #endregion
 
         private System.Windows.Forms.PictureBox picPreview;
-        private System.Windows.Forms.Button btnOpenOriginal;
         private System.Windows.Forms.ComboBox cmbEdgeDetection;
         private System.Windows.Forms.Button btnSaveNewImage;
+        private System.Windows.Forms.Button btnOpenOriginal;
     }
 }
 

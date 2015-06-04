@@ -29,7 +29,7 @@ namespace _6251App
             cmbEdgeDetection.Items.Add(new RainbowFilter());
         }
 
-        private void btnOpenOriginal_Click(object sender, EventArgs e)
+        public void btnOpenOriginal_Click(object sender, EventArgs e)
         {
             Bitmap image = manipuler.Load();
             
@@ -40,7 +40,7 @@ namespace _6251App
             }
         }
 
-        private void cmbEdgeDetection_SelectedIndexChanged(object sender, EventArgs e)
+        public void cmbEdgeDetection_SelectedIndexChanged(object sender, EventArgs e)
         {
             filter = (IFilter)cmbEdgeDetection.SelectedItem;
             Bitmap temp = new Bitmap(original, new Size(picPreview.Width, picPreview.Height));
@@ -48,7 +48,7 @@ namespace _6251App
             picPreview.Image = filtered;
         }
 
-        private void btnSaveNewImage_Click(object sender, EventArgs e)
+        public void btnSaveNewImage_Click(object sender, EventArgs e)
         {
             manipuler.Save(filtered);
         }
