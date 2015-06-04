@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace _6251App.FileManipulation
 {
-    class DialogFileManipulation : IFileManipulation
+    public class DialogFileManipulation : IFileManipulation
     {
         public Bitmap Load()
         {
@@ -27,7 +27,11 @@ namespace _6251App.FileManipulation
 
         public void Save(Bitmap image)
         {
-            throw new NotImplementedException();
+            FolderBrowserDialog fl = new FolderBrowserDialog();
+            if (fl.ShowDialog() != DialogResult.Cancel)
+            {
+                image.Save(fl.SelectedPath + @"\filtered.png", System.Drawing.Imaging.ImageFormat.Png);
+            }
         }
     }
 }

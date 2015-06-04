@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace _6251App.FileManipulation.Base
 {
-    interface IFileManipulation
+    public interface IFileManipulation
     {
         Bitmap Load();
         void Save(Bitmap image);

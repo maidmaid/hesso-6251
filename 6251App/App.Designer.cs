@@ -31,6 +31,7 @@
             this.picPreview = new System.Windows.Forms.PictureBox();
             this.btnOpenOriginal = new System.Windows.Forms.Button();
             this.cmbEdgeDetection = new System.Windows.Forms.ComboBox();
+            this.btnSaveNewImage = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picPreview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,11 +70,23 @@
             this.cmbEdgeDetection.TabIndex = 21;
             this.cmbEdgeDetection.SelectedIndexChanged += new System.EventHandler(this.cmbEdgeDetection_SelectedIndexChanged);
             // 
+            // btnSaveNewImage
+            // 
+            this.btnSaveNewImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveNewImage.Location = new System.Drawing.Point(461, 639);
+            this.btnSaveNewImage.Name = "btnSaveNewImage";
+            this.btnSaveNewImage.Size = new System.Drawing.Size(150, 46);
+            this.btnSaveNewImage.TabIndex = 22;
+            this.btnSaveNewImage.Text = "Save Image";
+            this.btnSaveNewImage.UseVisualStyleBackColor = true;
+            this.btnSaveNewImage.Click += new System.EventHandler(this.btnSaveNewImage_Click);
+            // 
             // App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(623, 728);
+            this.Controls.Add(this.btnSaveNewImage);
             this.Controls.Add(this.cmbEdgeDetection);
             this.Controls.Add(this.btnOpenOriginal);
             this.Controls.Add(this.picPreview);
@@ -89,6 +102,7 @@
         private System.Windows.Forms.PictureBox picPreview;
         private System.Windows.Forms.Button btnOpenOriginal;
         private System.Windows.Forms.ComboBox cmbEdgeDetection;
+        private System.Windows.Forms.Button btnSaveNewImage;
     }
 }
 

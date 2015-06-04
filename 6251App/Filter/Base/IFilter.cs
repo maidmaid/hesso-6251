@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace _6251App.Filter.Base
 {
-    interface IFilter
+    public interface IFilter
     {
         Bitmap Apply(Bitmap original);
     }

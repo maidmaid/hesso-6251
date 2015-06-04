@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace _6251App.Filter
 {
-    class RainbowFilter : IFilter
+    public class RainbowFilter : IFilter
     {
         public Bitmap Apply(Bitmap original)
         {

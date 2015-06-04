@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace _6251App.Filter
 {
-    class NullFilter : IFilter
+    public class NullFilter : IFilter
     {
         public Bitmap Apply(Bitmap original)
         {
