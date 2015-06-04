@@ -27,6 +27,7 @@ namespace _6251App
             manipuler = new DialogFileManipulation();
             cmbEdgeDetection.Items.Add(new NullFilter());
             cmbEdgeDetection.Items.Add(new RainbowFilter());
+            cmbEdgeDetection.Items.Add(new SwapFilter());
         }
 
         public void btnOpenOriginal_Click(object sender, EventArgs e)

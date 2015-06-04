@@ -50,6 +50,7 @@
     <Compile Include="FileManipulation\Base\IFileManipulation.cs" />
     <Compile Include="FileManipulation\DialogFileManipulation.cs" />
     <Compile Include="Filter\NullFilter.cs" />
+    <Compile Include="Filter\SwapFilter.cs" />
     <Compile Include="Filter\RainbowFilter.cs" />
     <Compile Include="App.cs">
       <SubType>Form</SubType>
