@@ -27,10 +27,14 @@ namespace _6251App.FileManipulation
 
         public void Save(Bitmap image)
         {
-            FolderBrowserDialog fl = new FolderBrowserDialog();
-            if (fl.ShowDialog() != DialogResult.Cancel)
+            // don't save the image if it's the original or if null
+            if (image != null)
             {
-                image.Save(fl.SelectedPath + @"\filtered.png", System.Drawing.Imaging.ImageFormat.Png);
+                FolderBrowserDialog fl = new FolderBrowserDialog();
+                if (fl.ShowDialog() != DialogResult.Cancel)
+                {
+                    image.Save(fl.SelectedPath + @"\filtered.png", System.Drawing.Imaging.ImageFormat.Png);
+                }
             }
         }
     }
