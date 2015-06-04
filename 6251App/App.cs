@@ -46,6 +46,10 @@ namespace _6251App
             
             if (image != null)
             {
+                // enable UI components when image loaded
+                cmbEdgeDetection.Enabled = true;
+                btnSaveNewImage.Enabled = true;
+                
                 picPreview.Image = image;
                 original = picPreview.Image;
             }
